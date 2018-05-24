@@ -1,0 +1,63 @@
+<!-- <table border="1">
+    <tr><td colspan="3">Cotroller</td></tr>
+    <tr><td>Lifetimes</td><td>Id</td><td>Hash Code</td></tr>
+    <tr><td>Transient</td><td>@ViewBag.TransientId</td><td>@ViewBag.TransientHashCode</td></tr>
+    <tr><td>Scoped</td><td>@ViewBag.ScopedId</td><td>@ViewBag.ScopedHashCode</td></tr>
+    <tr><td>Singleton</td><td>@ViewBag.SingletonId</td><td>@ViewBag.SingletonHashCode</td></tr>
+</table> -->
+
+<!-- @using MyWebsite.Models
+
+@inject ISampleTransient transient
+@inject ISampleScoped scoped
+@inject ISampleSingleton singleton
+
+<table border="1">
+    <tr><td colspan="3">Cotroller</td></tr>
+    <tr><td>Lifetimes</td><td>Id</td><td>Hash Code</td></tr>
+    <tr><td>Transient</td><td>@ViewBag.TransientId</td><td>@ViewBag.TransientHashCode</td></tr>
+    <tr><td>Scoped</td><td>@ViewBag.ScopedId</td><td>@ViewBag.ScopedHashCode</td></tr>
+    <tr><td>Singleton</td><td>@ViewBag.SingletonId</td><td>@ViewBag.SingletonHashCode</td></tr>
+</table>
+<hr />
+<table border="1">
+    <tr><td colspan="3">View</td></tr>
+    <tr><td>Lifetimes</td><td>Id</td><td>Hash Code</td></tr>
+    <tr><td>Transient</td><td>@transient.Id</td><td>@transient.GetHashCode()</td></tr>
+    <tr><td>Scoped</td><td>@scoped.Id</td><td>@scoped.GetHashCode()</td></tr>
+    <tr><td>Singleton</td><td>@singleton.Id</td><td>@singleton.GetHashCode()</td></tr>
+</table> -->
+
+
+@using MyWebsite
+@using MyWebsite.Models
+@using MyWebsite.Services
+
+@inject ISampleTransient transient
+@inject ISampleScoped scoped
+@inject ISampleSingleton singleton
+@inject CustomService customService
+
+<table border="1">
+    <tr><td colspan="3">Cotroller</td></tr>
+    <tr><td>Lifetimes</td><td>Id</td><td>Hash Code</td></tr>
+    <tr><td>Transient</td><td>@ViewBag.TransientId</td><td>@ViewBag.TransientHashCode</td></tr>
+    <tr><td>Scoped</td><td>@ViewBag.ScopedId</td><td>@ViewBag.ScopedHashCode</td></tr>
+    <tr><td>Singleton</td><td>@ViewBag.SingletonId</td><td>@ViewBag.SingletonHashCode</td></tr>
+</table>
+<hr />
+<table border="1">
+    <tr><td colspan="3">View</td></tr>
+    <tr><td>Lifetimes</td><td>Id</td><td>Hash Code</td></tr>
+    <tr><td>Transient</td><td>@transient.Id</td><td>@transient.GetHashCode()</td></tr>
+    <tr><td>Scoped</td><td>@scoped.Id</td><td>@scoped.GetHashCode()</td></tr>
+    <tr><td>Singleton</td><td>@singleton.Id</td><td>@singleton.GetHashCode()</td></tr>
+</table>
+<hr />
+<table border="1">
+    <tr><td colspan="3">Custom Service</td></tr>
+    <tr><td>Lifetimes</td><td>Id</td><td>Hash Code</td></tr>
+    <tr><td>Transient</td><td>@customService.Transient.Id</td><td>@customService.Transient.GetHashCode()</td></tr>
+    <tr><td>Scoped</td><td>@customService.Scoped.Id</td><td>@customService.Scoped.GetHashCode()</td></tr>
+    <tr><td>Singleton</td><td>@customService.Singleton.Id</td><td>@customService.Singleton.GetHashCode()</td></tr>
+</table>
