@@ -1,0 +1,13 @@
+@using MyWebsite.Utils
+
+@inherits CustomRazorPage<TModel>
+<div>Custom text: @CustomText</div>
+
+
+@functions {
+    public string GetHello()
+    {
+        return "Hello";
+    }
+}
+<div>From method: @GetHello()</div>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @RenderSection("styles", required: false)
+</head>
+<body>
+    <header>
+        Layout Header
+    </header>
+    <div>
+        <h1>@ViewBag.Title</h1>
+        @RenderBody()
+    </div>
+    <footer>
+        Layout footer
+    </footer>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

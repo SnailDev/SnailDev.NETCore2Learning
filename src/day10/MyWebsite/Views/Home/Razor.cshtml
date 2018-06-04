@@ -1,0 +1,37 @@
+@{
+    bool flag = true;
+    int number = 3;
+}
+
+@if(flag)
+{
+  <div>flag is true</div>
+} 
+else
+{
+  <div>flag is false</div>
+}
+
+@switch(number)
+{
+    case 3:
+        <div>number is lucky 3!!!!</div>
+        break;
+    default:
+        <div>number is @number</div>
+        break;
+}
+
+@for(var i = 0; i < number; i++)
+{
+    <div>For sample: @i</div>
+}
+
+@try
+{
+    throw new Exception("something wrong");
+}
+catch(Exception ex)
+{
+    <div>@ex.Message</div>
+}

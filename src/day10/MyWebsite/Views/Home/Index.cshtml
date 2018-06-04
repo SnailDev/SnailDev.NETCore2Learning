@@ -1,0 +1,13 @@
+
+
+
+@model List<UserModel>
+@{
+    ViewBag.Title = "User List";
+}
+
+@foreach(var user in Model)
+{
+    @Html.Partial("_UserInfo", user)
+    <hr />
+}
